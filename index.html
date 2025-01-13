@@ -3,10 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Convert your currency to other currencies fast!</title>
     <link rel="stylesheet" href="dist/styles.css">
+    <link rel="shortcut icon" href="assets/konvata-favicon.svg" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+IN:wght@100..400&family=Playwrite+VN:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+        nav {
+            font-family: "Playwrite IN", serif;
+        }
+        body {
+            font-family: "Exo 2", serif;
+
+        }
+        
+    </style>
 </head>
 <body>
+    <header class="relative bg-[#212121] pb-[16rem] lg:pb-32 h-[20rem] lg:h-[40rem]" id="header">
+        <nav class="flex items-center py-2 lg:py-4 px-4 lg:px-8 fixed top-3 lg:top-6 justify-between w-screen z-[999] ">
+            <a href="index.html" class="text-lg lg:text-2xl tracking-tighter text-[#F5F5F5]" id="konvata">Kon<span class="text-[1.25rem] lg:text-[1.53rem] text-[#2E7D32]" id="vata">Vata</span></a>
+
+            <button class="" type="button" id="menu-button">
+                <img src="assets/hamburger-icon.svg" alt="Hamburger" class="w-6 lg:w-10 h-6 lg:h-10">
+            </button>
+
+        </nav>
+
+        <!-- Hero Section -->
+        <div class="absolute top-0 left-[15%] lg:left-[16%] right-[15%] lg:right-[16%] w-[70vw] mt-16 lg:mt-20 py-5 lg:py-10 text-center flex flex-col gap-4" id="hero-section">
+            <h1 class="text-[#F5F5F5] text-xl lg:text-5xl">Konvata Exchange</h1>
+            <h3 class="text-[#4CAF50] text-base lg:text-3xl">Quick and reliable currency conversion at your fingertips!</h3>
+        </div>
+    </header>
+
+    <!-- Design Purposes only -->
+    <div class="absolute bottom-0 z-auto h-[400px] lg:h-[250px] w-full overflow-hidden before:absolute before:bottom-[-20px]  before:left-[-200px]  before:right-[-200px] before:top-0 before:rounded-[100%] before:bg-white"></div>
+
+
+    <!-- Currency Conversion Section -->
+    <section class=" mx-auto w-[70vw] mt-3 lg:mt-6 bg-[#f5f5f5] p-6 lg:p-12 relative z-10 -top-[8rem] lg:-top-[20rem] rounded-xl lg:rounded-3xl pb-12 lg:pb-24 h-auto shadow-[1px_1px_2px_2px_#fff]"  id="conversion">
+        <form action="#" method="post" class="flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-0" id="myForm">
+
+            <div class="flex flex-col items-center gap-4">
+                <!-- First Select Field -->
+                <select name="first-select" class="text-lg lg:text-2xl text-[#212121] bg-transparent tracking-wide outline-none mx-auto" id="first-select">
+                    <!-- To dynamically populate options with JS -->
+                    <option value="">First Currency</option>
+                </select>
+
+                <!-- First Input Field -->
+                <div class="border border-[#212121] w-full lg:w-[18rem] h-10 lg:h-12 flex items-center pl-3 lg:pl-5 rounded-lg" id="first-input-div">
+                   <input type="text" name="first-input" class="bg-transparent outline-none text-lg text-ellipsis" id="first-input" placeholder="Enter a value">
+                </div>
+
+                <!-- Error message -->
+                <p class="hidden text-red-600 font-bold text-sm lg:text-base ">Please, enter a valid number!</p>
+            </div>
     
+            <!-- Exchange Icon -->
+            <img src="assets/exchange-icon.svg" alt="Exchange Icon" class="w-11 h-11 flex items-end lg:mt-[3%] rotate-90 lg:rotate-0">
+
+            <div class="flex flex-col items-center gap-4">
+                <!-- Second Select Field -->
+                <select name="second-select" class="text-lg lg:text-2xl text-[#212121] bg-transparent tracking-wide outline-none mx-auto" id="second-select">
+                    <!-- To dynamically populate options with JS -->
+                    <option value="">Second Currency</option>
+                </select>
+
+                <!-- Second Input Field -->
+                <div class="border border-[#212121] w-full lg:w-[18rem] h-10 lg:h-12 flex items-center pl-3 lg:pl-5 rounded-lg" id="second-input-div">
+                    <input type="text" name="second-input" class="bg-transparent outline-none text-lg text-ellipsis" id="second-input" placeholder="Enter a value">
+                </div>
+
+                <!-- Error message -->
+                <p class="hidden text-red-600 font-bold text-sm lg:text-base">Please, enter a valid number!</p>
+            </div>
+
+        </form>
+    </section>
+
+    <section class="rates">
+        <!-- To dynamically populate rates with JS -->
+        <p>1 
+            <span>USD</span>
+            is
+            <span>1700</span>
+            <span>NGN</span>
+        </p>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
