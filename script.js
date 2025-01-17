@@ -26,6 +26,12 @@ menuButton.addEventListener("click", function () {
     menuButton.firstElementChild.src = menuButton.firstElementChild.src.includes(closeIcon) ? hamburgerIcon : closeIcon;
 })
 
+document.addEventListener("click", (event)=> {
+    if (!menu.contains(event.target) && !menuButton.contains(event.target)){
+        menu.classList.add("hidden");
+        menuButton.firstElementChild.src = hamburgerIcon;
+    }
+})
 
 window.addEventListener("scroll", () => {
     const goToTop = document.getElementById("go-to-top");

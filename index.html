@@ -23,68 +23,70 @@
     </style>
 </head>
 <body>
-    <header class="relative bg-[#212121] pb-[16rem] lg:pb-32 h-[20rem] lg:h-[40rem]" id="header">
-        <nav class="flex items-center py-2 lg:py-4 px-4 lg:px-8 fixed top-3 lg:top-6 justify-between w-screen z-[999] ">
-            <a href="index.html" class="text-base lg:text-2xl tracking-tighter text-[#F5F5F5]" id="konvata">Kon<span class="text-[1.125rem] lg:text-[1.53rem] text-[#2E7D32]" id="vata">Vata</span></a>
+    <header class="relative bg-[#212121] pb-[16rem] lg:pb-32 h-[20rem] sm:h-[25rem] md:h-[32rem] lg:h-[40rem]" id="header">
+        <nav class="flex items-center py-2 sm:py-3 md:py-4 px-4 sm:px-6 lg:px-8 fixed top-3 sm:top-4 lg:top-6 justify-between w-screen z-[999] ">
+            <a href="index.html" class="text-base sm:text-lg md:text-xl lg:text-2xl tracking-tighter text-[#F5F5F5]" id="konvata">Kon<span class="text-[1.125rem] sm:text-[1.25rem] md:text-[1.45rem] lg:text-[1.53rem] text-[#2E7D32]" id="vata">Vata</span></a>
 
             <button class="" type="button" id="menu-button">
-                <img src="assets/hamburger-icon.svg" alt="Hamburger" class="w-6 lg:w-10 h-6 lg:h-10">
+                <img src="assets/hamburger-icon.svg" alt="Hamburger" class="w-6 sm:w-8 md:w-9 lg:w-10 h-6 sm:h-8 md:h-9 lg:h-10">
             </button>
 
         </nav>
 
         <!-- Menu -->
-        <div class=" fixed hidden top-[10%] rounded-t-md rounded-b-md w-screen h-screen bg-[#f5f5f5] z-50 py-6 px-24 overflow-y-auto" id="menu">
-            <!-- Other Converters -->
-            <div id="other-converters">
-                <h2 class="font-extrabold text-xl underline decoration-[5px] decoration-[#4caf50] pb-1">Other Converters</h2>
-                <div class="flex flex-col mt-2 gap-2 text-lg font-semibold">
-                    <a href="#" class="hover:text-[#4CAF50]">Length Converter</a>
-                    <a href="#" class="hover:text-[#4CAF50]">Temperature Converter</a>
-                    <a href="#" class="hover:text-[#4CAF50]">Weight Converter</a>
-                    <a href="#" class="hover:text-[#4CAF50]">Unit Converter</a>
-                    <a href="#" class="hover:text-[#4CAF50]">Energy Converter</a>
-                    <a href="#" class="hover:text-[#4CAF50]">Volume Converter</a>
+        <div class=" fixed hidden top-[10%] sm:top-[7%] lg:top-[12%] rounded-t-md rounded-b-md w-screen sm:w-[90vw] lg:w-screen h-screen lg:h-[35vh] bg-[#f5f5f5] z-50 py-6 lg:py-3 px-20 lg:px-36 overflow-y-auto lg:overflow-y-hidden" id="menu">
+            <div class="block lg:flex items-center justify-between">
+                <!-- Other Converters -->
+                <div id="other-converters" class="lg:h-[350px]">
+                    <h2 class="font-extrabold text-xl sm:text-2xl lg:text-xl underline decoration-[5px] decoration-[#4caf50] pb-1">Other Converters</h2>
+                    <div class="grid grid-cols-1 mt-2 gap-2 md:gap-3 lg:gap-2 text-lg lg:text-base font-semibold">
+                        <a href="#" class="hover:text-[#4CAF50]">Length Converter</a>
+                        <a href="#" class="hover:text-[#4CAF50]">Temperature Converter</a>
+                        <a href="#" class="hover:text-[#4CAF50]">Weight Converter</a>
+                        <a href="#" class="hover:text-[#4CAF50]">Unit Converter</a>
+                        <a href="#" class="hover:text-[#4CAF50]">Energy Converter</a>
+                        <a href="#" class="hover:text-[#4CAF50]">Volume Converter</a>
+                    </div>
+
+
                 </div>
 
-                
-            </div>
-
-            <!-- Language Variations -->
-            <div class="mt-6">
-                <h2 class="font-extrabold text-xl underline decoration-[5px] decoration-[#4caf50] pb-1">Language Variations</h2>
-                <div class="flex flex-col mt-2 gap-2 text-lg font-semibold">
-                    <a href="#" class="hover:text-[#4CAF50]">English</a>
-                    <a href="" class="hover:text-[#4CAF50]">Deutsch</a>
-                    <a href="" class="hover:text-[#4CAF50]">Français</a>
-                    <a href="" class="hover:text-[#4CAF50]">Español</a>
-                    <a href="" class="hover:text-[#4CAF50]">Italiano</a>
-                    <a href="" class="hover:text-[#4CAF50]">Русский (Russkiy)</a>
-                    <a href="" class="hover:text-[#4CAF50]">العربية (al-ʿarabiyyah)</a>
-                    <a href="" class="hover:text-[#4CAF50]">Èdè Yorùbá</a>
-                    <a href="" class="hover:text-[#4CAF50]">Kiswahili</a>
+                <!-- Language Variations -->
+                <div class="mt-6 lg:mt-0 lg:h-[350px]">
+                    <h2 class="font-extrabold text-xl sm:text-2xl lg:text-xl underline decoration-[5px] decoration-[#4caf50] pb-1">Language Variations</h2>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 mt-2 gap-2 sm:gap-1 md:gap-3 text-lg lg:text-base font-semibold">
+                        <a href="#" class="hover:text-[#4CAF50]">English</a>
+                        <a href="" class="hover:text-[#4CAF50]">Deutsch</a>
+                        <a href="" class="hover:text-[#4CAF50]">Français</a>
+                        <a href="" class="hover:text-[#4CAF50]">Español</a>
+                        <a href="" class="hover:text-[#4CAF50]">Italiano</a>
+                        <a href="" class="hover:text-[#4CAF50]">Русский (Russkiy)</a>
+                        <a href="" class="hover:text-[#4CAF50]">العربية (al-ʿarabiyyah)</a>
+                        <a href="" class="hover:text-[#4CAF50]">Èdè Yorùbá</a>
+                        <a href="" class="hover:text-[#4CAF50]">Kiswahili</a>
+                    </div>
                 </div>
-            </div>
 
-            <!-- Contact Us -->
-            <div class="mt-6 pb-2">
-                <h2 class="font-extrabold text-xl underline decoration-[5px] decoration-[#4caf50] pb-1">Contact Us</h2>
-                <div class="flex flex-col mt-2 gap-2 text-lg font-semibold">
-                    <a href="#" class="flex gap-2 items-center text-lg hover:text-[#4CAF50]"> <img class="w-6 h-6" src="assets/facebook.svg" alt="">Facebook</a>
-                    <a href="#" class="flex gap-2 items-center text-lg hover:text-[#4CAF50]"><img class="w-6 h-6" src="assets/x.svg" alt="">X</a>
-                    <a href="#" class="flex gap-2 items-center text-lg hover:text-[#4CAF50]"><img class="w-6 h-6" src="assets/instagram.svg" alt="">Instagram</a>
-                    <a href="#" class="flex gap-2 items-center text-lg hover:text-[#4CAF50]"><img class="w-6 h-6" src="assets/linkedin.svg" alt="">LinkedIn</a>
-                    <a href="#" class="flex gap-2 items-center text-lg hover:text-[#4CAF50]"><img class="w-6 h-6" src="assets/youtube.svg" alt="">YouTube</a>
-                    <a href="#" class="flex gap-2 items-center text-lg hover:text-[#4CAF50]"><img class="w-6 h-6" src="assets/email.svg" alt="">Email</a>
-                    <a href="#" class="flex gap-2 items-center text-lg hover:text-[#4CAF50]"><img class="w-6 h-6" src="assets/telephone.svg" alt="">Phone</a>
+                <!-- Contact Us -->
+                <div class="mt-6 lg:mt-0 pb-2 lg:pb-0 lg:h-[350px]">
+                    <h2 class="font-extrabold text-xl sm:text-2xl lg:text-xl underline decoration-[5px] decoration-[#4caf50] pb-1">Contact Us</h2>
+                    <div class="grid grid-cols-1 lg:grid-cols-2 mt-2 gap-2 md:gap-3 text-lg sm:xl lg:text-base font-semibold">
+                        <a href="#" class="flex gap-2 items-center hover:text-[#4CAF50]"> <img class="w-6 h-6" src="assets/facebook.svg" alt="">Facebook</a>
+                        <a href="#" class="flex gap-2 items-center hover:text-[#4CAF50]"><img class="w-6 h-6" src="assets/x.svg" alt="">X</a>
+                        <a href="#" class="flex gap-2 items-center hover:text-[#4CAF50]"><img class="w-6 h-6" src="assets/instagram.svg" alt="">Instagram</a>
+                        <a href="#" class="flex gap-2 items-center hover:text-[#4CAF50]"><img class="w-6 h-6" src="assets/linkedin.svg" alt="">LinkedIn</a>
+                        <a href="#" class="flex gap-2 items-center hover:text-[#4CAF50]"><img class="w-6 h-6" src="assets/youtube.svg" alt="">YouTube</a>
+                        <a href="#" class="flex gap-2 items-center hover:text-[#4CAF50]"><img class="w-6 h-6" src="assets/email.svg" alt="">Email</a>
+                        <a href="#" class="flex gap-2 items-center hover:text-[#4CAF50]"><img class="w-6 h-6" src="assets/telephone.svg" alt="">Phone</a>
+                    </div>
                 </div>
             </div>
         </div>
 
         <!-- Hero Section -->
-        <div class="absolute top-0 left-[15%] lg:left-[16%] right-[15%] lg:right-[16%] w-[70vw] mt-16 lg:mt-20 py-5 lg:py-10 text-center flex flex-col gap-4" id="hero-section">
-            <h1 class="text-[#F5F5F5] text-xl lg:text-5xl">Konvata Exchange</h1>
-            <h3 class="text-[#4CAF50] text-base lg:text-3xl">Quick and reliable currency conversion at your fingertips!</h3>
+        <div class="absolute top-0 left-[15%] lg:left-[16%] right-[15%] lg:right-[16%] w-[70vw] mt-16 sm:mt-20 md:mt-28 lg:mt-20 py-5 lg:py-10 text-center flex flex-col gap-4" id="hero-section">
+            <h1 class="text-[#F5F5F5] text-xl sm:text-3xl md:text-4xl lg:text-5xl">Konvata Exchange</h1>
+            <h3 class="text-[#4CAF50] text-base sm:text-xl md:text-2xl lg:text-3xl">Quick and reliable currency conversion at your fingertips!</h3>
         </div>
     </header>
 
@@ -95,21 +97,21 @@
         </a>
     </div>
     <!-- Design Purposes only -->
-    <div class="absolute bottom-0 z-auto h-[59%] lg:h-[250px] w-full overflow-hidden before:absolute before:bottom-[-20px] before:left-[-200px]  before:right-[-200px] before:top-0 before:rounded-[100%] before:bg-white"></div>
+    <div class="absolute bottom-0 z-auto h-[59%] sm:h-[68%] md:h-[59%] lg:h-[250px] w-full overflow-hidden before:absolute before:bottom-[-20px] before:left-[-200px]  before:right-[-200px] before:top-0 before:rounded-[100%] before:bg-white"></div>
 
 
     <!-- Currency Conversion Section -->
-    <section class=" mx-auto w-[70vw] mt-3 lg:mt-6 bg-[#f5f5f5] p-6 lg:p-12 relative z-10 -top-[8rem] lg:-top-[20rem] rounded-xl lg:rounded-3xl pb-12 lg:pb-24 h-auto shadow-[1px_1px_2px_2px_#fff]"  id="conversion">
+    <section class=" mx-auto w-[70vw] mt-3 lg:mt-6 bg-[#f5f5f5] p-6 lg:p-12 relative z-10 -top-[8rem] sm:-top-[12rem] md:-top-[15rem] lg:-top-[20rem] rounded-xl lg:rounded-3xl pb-12 sm:pb-16 md:pb-20 lg:pb-24 h-auto shadow-[1px_1px_2px_2px_#fff]"  id="conversion">
         <form action="#" method="post" class="flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-0" id="myForm">
 
             <div class="flex flex-col items-center gap-4">
                 <!-- First Select Field -->
-                <select name="first-select" class="text-lg lg:text-2xl text-[#212121] bg-transparent tracking-wide outline-none mx-auto" id="first-select">
+                <select name="first-select" class="text-lg sm:text-2xl lg:text-2xl text-[#212121] bg-transparent tracking-wide outline-none mx-auto" id="first-select">
                     <!-- To dynamically populate options with JS -->
                 </select>
 
                 <!-- First Input Field -->
-                <div class="border border-[#212121] w-full lg:w-[18rem] h-10 lg:h-12 flex items-center pl-3 lg:pl-5 rounded-lg" id="first-input-div">
+                <div class="border border-[#212121] w-full sm:w-[22rem] md:w-[23rem] lg:w-[18rem] h-10 sm:h-12 flex items-center pl-3 sm:pl-4 lg:pl-5 rounded-lg" id="first-input-div">
                    <input type="text" name="first-input" class="bg-transparent outline-none text-lg text-ellipsis" id="first-input" placeholder="Enter a value">
                 </div>
 
@@ -122,12 +124,12 @@
 
             <div class="flex flex-col items-center gap-4">
                 <!-- Second Select Field -->
-                <select name="second-select" class="text-lg lg:text-2xl text-[#212121] bg-transparent tracking-wide outline-none mx-auto" id="second-select">
+                <select name="second-select" class="text-lg sm:text-2xl lg:text-2xl text-[#212121] bg-transparent tracking-wide outline-none mx-auto" id="second-select">
                     <!-- To dynamically populate options with JS -->
                 </select>
 
                 <!-- Second Input Field -->
-                <div class="border border-[#212121] w-full lg:w-[18rem] h-10 lg:h-12 flex items-center pl-3 lg:pl-5 rounded-lg" id="second-input-div">
+                <div class="border border-[#212121] w-full sm:w-[22rem] md:w-[23rem] lg:w-[18rem] h-10 sm:h-12 flex items-center pl-3 sm:pl-4 lg:pl-5 rounded-lg" id="second-input-div">
                     <input type="text" name="second-input" class="bg-transparent outline-none text-lg text-ellipsis" id="second-input" placeholder="Enter a value">
                 </div>
 
