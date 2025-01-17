@@ -2,6 +2,9 @@ const navbar = document.getElementsByTagName("nav");
 const logo = document.getElementById("konvata");
 const vata = logo.firstElementChild;
 
+const firstSelect = document.getElementById("first-select"); 
+const secondSelect = document.getElementById("second-select"); 
+
 
 const firstInput = document.querySelector("#first-input");
 const firstInputValue = firstInput.value;
@@ -11,8 +14,28 @@ const secondInput = document.querySelector("#second-input");
 const secondInputValue = secondInput.value;
 const secondInputError = document.getElementById("second-input-div").nextElementSibling;
 
+const menuButton = document.querySelector("#menu-button");
+const menu = document.getElementById("menu");
 
-// window.addEventListener("scroll", () => {
+const hamburgerIcon = "assets/hamburger-icon.svg";
+const closeIcon = "assets/close-icon.svg";
+
+menuButton.addEventListener("click", function () {
+    menu.classList.toggle("hidden");
+    // menButton.firstElementChild.src = "assets/close-icon.svg";
+    menuButton.firstElementChild.src = menuButton.firstElementChild.src.includes(closeIcon) ? hamburgerIcon : closeIcon;
+})
+
+
+window.addEventListener("scroll", () => {
+    const goToTop = document.getElementById("go-to-top");
+
+    if (window.scrollY > 100) {
+        goToTop.style.display = "block";
+    } else {
+        goToTop.style.display = "none";
+    }
+    
 //     if (window.scrollY > 100) {
 //         navbar[0].style.backgroundColor = "#f1f1f1";
 //         logo.style.color = "#212121";
@@ -21,28 +44,28 @@ const secondInputError = document.getElementById("second-input-div").nextElement
 //     else {
         
 //     }
-// })
+ })
 
 firstInput.addEventListener("input", function () {
     if (isNaN(firstInput.value)) {
-        firstInputError.textContent = "Please enter a valid number!";        
+        firstInputError.style.display = "block";        
     } else {
-        firstInputError.textContent = "";
+        firstInputError.style.display = "none";
     }
 })
 
 firstInput.addEventListener("blur", function () {
-    firstInputError.textContent = "";
+    firstInputError.style.display = "none";
 })
 
 secondInput.addEventListener("input", function () {
     if (isNaN(secondInput.value)) {
-        secondInputError.textContent = "Please enter a valid number!";        
+        secondInputError.style.display = "block";        
     } else {
-        secondInputError.textContent = "";
+        secondInputError.style.display = "none";
     }
 })
 
 secondInput.addEventListener("blur", function () {
-    secondInputError.textContent = "";
+    secondInputError.style.display = "none";
 })
