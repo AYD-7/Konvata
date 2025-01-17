@@ -19,18 +19,67 @@
 
         }
         
+        
     </style>
 </head>
 <body>
     <header class="relative bg-[#212121] pb-[16rem] lg:pb-32 h-[20rem] lg:h-[40rem]" id="header">
         <nav class="flex items-center py-2 lg:py-4 px-4 lg:px-8 fixed top-3 lg:top-6 justify-between w-screen z-[999] ">
-            <a href="index.html" class="text-lg lg:text-2xl tracking-tighter text-[#F5F5F5]" id="konvata">Kon<span class="text-[1.25rem] lg:text-[1.53rem] text-[#2E7D32]" id="vata">Vata</span></a>
+            <a href="index.html" class="text-base lg:text-2xl tracking-tighter text-[#F5F5F5]" id="konvata">Kon<span class="text-[1.125rem] lg:text-[1.53rem] text-[#2E7D32]" id="vata">Vata</span></a>
 
             <button class="" type="button" id="menu-button">
                 <img src="assets/hamburger-icon.svg" alt="Hamburger" class="w-6 lg:w-10 h-6 lg:h-10">
             </button>
 
         </nav>
+
+        <!-- Menu -->
+        <div class=" fixed hidden top-[10%] rounded-t-md rounded-b-md w-screen h-screen bg-[#f5f5f5] z-50 py-6 px-24 overflow-y-auto" id="menu">
+            <!-- Other Converters -->
+            <div id="other-converters">
+                <h2 class="font-extrabold text-xl underline decoration-[5px] decoration-[#4caf50] pb-1">Other Converters</h2>
+                <div class="flex flex-col mt-2 gap-2 text-lg font-semibold">
+                    <a href="#" class="hover:text-[#4CAF50]">Length Converter</a>
+                    <a href="#" class="hover:text-[#4CAF50]">Temperature Converter</a>
+                    <a href="#" class="hover:text-[#4CAF50]">Weight Converter</a>
+                    <a href="#" class="hover:text-[#4CAF50]">Unit Converter</a>
+                    <a href="#" class="hover:text-[#4CAF50]">Energy Converter</a>
+                    <a href="#" class="hover:text-[#4CAF50]">Volume Converter</a>
+                </div>
+
+                
+            </div>
+
+            <!-- Language Variations -->
+            <div class="mt-6">
+                <h2 class="font-extrabold text-xl underline decoration-[5px] decoration-[#4caf50] pb-1">Language Variations</h2>
+                <div class="flex flex-col mt-2 gap-2 text-lg font-semibold">
+                    <a href="#" class="hover:text-[#4CAF50]">English</a>
+                    <a href="" class="hover:text-[#4CAF50]">Deutsch</a>
+                    <a href="" class="hover:text-[#4CAF50]">Français</a>
+                    <a href="" class="hover:text-[#4CAF50]">Español</a>
+                    <a href="" class="hover:text-[#4CAF50]">Italiano</a>
+                    <a href="" class="hover:text-[#4CAF50]">Русский (Russkiy)</a>
+                    <a href="" class="hover:text-[#4CAF50]">العربية (al-ʿarabiyyah)</a>
+                    <a href="" class="hover:text-[#4CAF50]">Èdè Yorùbá</a>
+                    <a href="" class="hover:text-[#4CAF50]">Kiswahili</a>
+                </div>
+            </div>
+
+            <!-- Contact Us -->
+            <div class="mt-6 pb-2">
+                <h2 class="font-extrabold text-xl underline decoration-[5px] decoration-[#4caf50] pb-1">Contact Us</h2>
+                <div class="flex flex-col mt-2 gap-2 text-lg font-semibold">
+                    <a href="#" class="flex gap-2 items-center text-lg hover:text-[#4CAF50]"> <img class="w-6 h-6" src="assets/facebook.svg" alt="">Facebook</a>
+                    <a href="#" class="flex gap-2 items-center text-lg hover:text-[#4CAF50]"><img class="w-6 h-6" src="assets/x.svg" alt="">X</a>
+                    <a href="#" class="flex gap-2 items-center text-lg hover:text-[#4CAF50]"><img class="w-6 h-6" src="assets/instagram.svg" alt="">Instagram</a>
+                    <a href="#" class="flex gap-2 items-center text-lg hover:text-[#4CAF50]"><img class="w-6 h-6" src="assets/linkedin.svg" alt="">LinkedIn</a>
+                    <a href="#" class="flex gap-2 items-center text-lg hover:text-[#4CAF50]"><img class="w-6 h-6" src="assets/youtube.svg" alt="">YouTube</a>
+                    <a href="#" class="flex gap-2 items-center text-lg hover:text-[#4CAF50]"><img class="w-6 h-6" src="assets/email.svg" alt="">Email</a>
+                    <a href="#" class="flex gap-2 items-center text-lg hover:text-[#4CAF50]"><img class="w-6 h-6" src="assets/telephone.svg" alt="">Phone</a>
+                </div>
+            </div>
+        </div>
 
         <!-- Hero Section -->
         <div class="absolute top-0 left-[15%] lg:left-[16%] right-[15%] lg:right-[16%] w-[70vw] mt-16 lg:mt-20 py-5 lg:py-10 text-center flex flex-col gap-4" id="hero-section">
@@ -39,8 +88,14 @@
         </div>
     </header>
 
+    <!-- Go To Top -->
+    <div class="bg-[#212121] hover:bg-[#2121218e] w-[50px] lg:w-[100px] h-[50px] lg:h-[100px] rounded-full fixed bottom-16 right-6 z-40 p-1 lg:p-2 hidden " id="go-to-top">
+        <a href="#" class="block object-contain">
+            <img src="assets/arrow-up.svg" alt="go to top" class="w-12 lg:w-20 h-12 lg:h-20">
+        </a>
+    </div>
     <!-- Design Purposes only -->
-    <div class="absolute bottom-0 z-auto h-[400px] lg:h-[250px] w-full overflow-hidden before:absolute before:bottom-[-20px]  before:left-[-200px]  before:right-[-200px] before:top-0 before:rounded-[100%] before:bg-white"></div>
+    <div class="absolute bottom-0 z-auto h-[59%] lg:h-[250px] w-full overflow-hidden before:absolute before:bottom-[-20px] before:left-[-200px]  before:right-[-200px] before:top-0 before:rounded-[100%] before:bg-white"></div>
 
 
     <!-- Currency Conversion Section -->
@@ -51,7 +106,6 @@
                 <!-- First Select Field -->
                 <select name="first-select" class="text-lg lg:text-2xl text-[#212121] bg-transparent tracking-wide outline-none mx-auto" id="first-select">
                     <!-- To dynamically populate options with JS -->
-                    <option value="">First Currency</option>
                 </select>
 
                 <!-- First Input Field -->
@@ -70,7 +124,6 @@
                 <!-- Second Select Field -->
                 <select name="second-select" class="text-lg lg:text-2xl text-[#212121] bg-transparent tracking-wide outline-none mx-auto" id="second-select">
                     <!-- To dynamically populate options with JS -->
-                    <option value="">Second Currency</option>
                 </select>
 
                 <!-- Second Input Field -->
