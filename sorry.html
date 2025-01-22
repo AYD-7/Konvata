@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorry, this page does not exist!</title>
+    <link rel="stylesheet" href="dist/styles.css">
+    <link rel="shortcut icon" href="assets/konvata-favicon.svg" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+IN:wght@100..400&family=Playwrite+VN:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+        #konvata {
+            font-family: "Playwrite IN", serif;
+        }
+        body {
+            font-family: "Exo 2", serif;
+
+        }
+        
+        
+    </style>
+</head>
+<body class="bg-[#212121] h-screen">
+    <!-- Company's logo -->
+    <a href="index.html" class="flex justify-center mt-10 lg:mt-20 mx-auto text-lg sm:text-xl md:text-3xl lg:text-5xl tracking-tighter text-[#F5F5F5]" id="konvata">Kon<span class="text-[1.25rem] sm:text-[1.5rem] md:text-[2.2rem] lg:text-[3.2rem] text-[#2E7D32]" id="vata">Vata</span></a>
+
+    <div>
+       <img class="block mx-auto mt-10 lg:mt-0 w-[40%] lg:w-[25%]" src="assets/sorry.svg" alt="">
+
+        <p class="text-center w-[70vw] mx-auto text-base sm:text-lg md:text-xl lg:text-2xl font-bold tracking-tighter text-[#F5F5F5] mt-8 lg:mt-4">
+            We're sorry, but the page you're looking for is currently unavailable. It’s not ready yet, but we’re working hard to bring it to you soon. Please check back later or <a href="index.html" class="text-[#2e7d32] hover:text-[#4caf50]">check our currency converter app</a>. Thank you for your patience and understanding!
+        </p>
+
+        <a class="block mx-auto text-center mt-6 text-sm w-[100px] bg-[#2e7d32] hover:bg-[#4caf50] text-[#f5f5f5] rounded-lg p-2" id="go-back">Go Back!</a>
+    </div>
+
+    <script>
+        // Making the Go Back link functional
+
+        const goBack = document.getElementById("go-back");
+
+        goBack.addEventListener("click", function (event) {
+            event.preventDefault();
+
+            // Checking if there is a history to go back to
+            if (window.history.length > 1) {
+              window.history.back(); // Go back to the previous page
+            } else {
+              // Redirect to a fallback page if no history is available
+              alert('No previous page found in history.');
+              window.location.href = "index.html"; // Redirect to the home page
+            }
+        })
+
+        console.log(goBack);
+
+        console.log('History length:', window.history.length);
+
+    </script>
+
+</body>
+</html>

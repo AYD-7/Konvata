@@ -75,3 +75,5 @@ secondInput.addEventListener("input", function () {
 secondInput.addEventListener("blur", function () {
     secondInputError.style.display = "none";
 })
+
+
