@@ -1,27 +1,30 @@
 const navbar = document.getElementsByTagName("nav");//Getting the navbar section
 const logo = document.getElementById("konvata");// Getting company's logo
-const vata = logo.firstElementChild;
+const vata = logo.firstElementChild;//Getting a part of the company's logo
 
-const menuButton = document.querySelector("#menu-button");
-const menu = document.getElementById("menu");
+const menuButton = document.querySelector("#menu-button");//Getting the button that toggles the menu's visibility
+const menu = document.getElementById("menu");//Getting the menu
 
-const hamburgerIcon = "assets/hamburger-icon.svg";
-const closeIcon = "assets/close-icon.svg";
+const hamburgerIcon = "assets/hamburger-icon.svg";//The hamburger icon
+const closeIcon = "assets/close-icon.svg";//The close icon
 
 
+// Functionality to toggle the menu's visibility
 menuButton.addEventListener("click", function () {
     menu.classList.toggle("hidden");
     // menButton.firstElementChild.src = "assets/close-icon.svg";
-    menuButton.firstElementChild.src = menuButton.firstElementChild.src.includes(closeIcon) ? hamburgerIcon : closeIcon;
+    menuButton.firstElementChild.src = menuButton.firstElementChild.src.includes(closeIcon) ? hamburgerIcon : closeIcon;//Toggling the src value of the img tag in the menu button
 })
 
+// Functionality to close the menu when clicking outside of it
 document.addEventListener("click", (event)=> {
     if (!menu.contains(event.target) && !menuButton.contains(event.target)){
-        menu.classList.add("hidden");
-        menuButton.firstElementChild.src = hamburgerIcon;
+        menu.classList.add("hidden");//Closing the menu
+        menuButton.firstElementChild.src = hamburgerIcon;//Changing the icon back to hamburger icon
     }
 })
 
+// Functionality to show the go-to-top link when the user scrolls the web page
 window.addEventListener("scroll", () => {
     const goToTop = document.getElementById("go-to-top");
 
@@ -41,25 +44,25 @@ window.addEventListener("scroll", () => {
 //     }
  })
 
- const firstSelect = document.getElementById("first-select"); 
- const secondSelect = document.getElementById("second-select"); 
+ const firstSelect = document.getElementById("first-select");//Getting the first select element
+ const secondSelect = document.getElementById("second-select");//Getting the second select element
  
  
- const firstInput = document.querySelector("#first-input");
- const firstInputValue = firstInput.value;
- const firstInputError = document.getElementById("first-input-div").nextElementSibling;
+ const firstInput = document.querySelector("#first-input");//Getting the first input
+ const firstInputValue = firstInput.value;// Getting the first input value 
+ const firstInputError = document.getElementById("first-input-div").nextElementSibling;//Getting the first error field
  
- const secondInput = document.querySelector("#second-input");
- const secondInputValue = secondInput.value;
- const secondInputError = document.getElementById("second-input-div").nextElementSibling;
+ const secondInput = document.querySelector("#second-input");//Getting the second input
+ const secondInputValue = secondInput.value;//Getting the second input value
+ const secondInputError = document.getElementById("second-input-div").nextElementSibling;//Getting the second error field
 
 //  Storing conversion rates globally to avoid redundant API calls
 let conversionRates = {};
  
 
 // Fetching available currencies and populate dropdowns
-const apiKey = "cur_live_n4Qiv6gkOCOdUH6pf0mMcCuqRdzMSqWg8hMyhKnO";
-const url = "https://api.currencyapi.com/v3/latest?apikey=cur_live_n4Qiv6gkOCOdUH6pf0mMcCuqRdzMSqWg8hMyhKnO";
+const apiKey = "cur_live_n4Qiv6gkOCOdUH6pf0mMcCuqRdzMSqWg8hMyhKnO";// Free API Key from currencyapi.com to expire on Feb 20, 2025 
+const url = "https://api.currencyapi.com/v3/latest?apikey=cur_live_n4Qiv6gkOCOdUH6pf0mMcCuqRdzMSqWg8hMyhKnO";//URL address for the api
 
 async function  fetchCurrencies (){
     try {
@@ -90,6 +93,7 @@ async function  fetchCurrencies (){
 //Function to fetch conversion rates for the firstSelect
 async function fetchConversionRates () {
     const first = firstSelect.value;
+    // Trying to catch errors
     try {
         const response = await fetch (
             `${url}/latest?apikey=${apiKey}&base_currency=${first}`
