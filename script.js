@@ -49,26 +49,27 @@ window.addEventListener("scroll", () => {
  
  
  const firstInput = document.querySelector("#first-input");//Getting the first input
- const firstInputValue = firstInput.value;// Getting the first input value 
- const firstInputError = document.getElementById("first-input-div").nextElementSibling;//Getting the first error field
+ let firstInputValue = firstInput.value;// Getting the first input value 
+ let firstInputError = document.getElementById("first-input-div").nextElementSibling;//Getting the first error field
  
  const secondInput = document.querySelector("#second-input");//Getting the second input
- const secondInputValue = secondInput.value;//Getting the second input value
- const secondInputError = document.getElementById("second-input-div").nextElementSibling;//Getting the second error field
+ let secondInputValue = secondInput.value;//Getting the second input value
+ let secondInputError = document.getElementById("second-input-div").nextElementSibling;//Getting the second error field
 
 //  Storing conversion rates globally to avoid redundant API calls
 let conversionRates = {};
  
 
 // Fetching available currencies and populate dropdowns
-const apiKey = "cur_live_n4Qiv6gkOCOdUH6pf0mMcCuqRdzMSqWg8hMyhKnO";// Free API Key from currencyapi.com to expire on Feb 20, 2025 
-const url = "https://api.currencyapi.com/v3/latest?apikey=cur_live_n4Qiv6gkOCOdUH6pf0mMcCuqRdzMSqWg8hMyhKnO";//URL address for the api
+const apiKey = "cur_live_u6a4fUBOPBpTHy7e73gmfaOQw4kAhZ7YlCccE3M7";// Free API Key from currencyapi.com to expire on Feb 20, 2025 
+const url = "https://api.currencyapi.com/v3";//URL address for the api
 
 async function  fetchCurrencies (){
     try {
         const response = await fetch (`${url}/currencies?apikey=${apiKey}`);
         const data = await response.json();
         const currencies = data.data;
+        
 
         // Populating both dropdowns 
         for (let currency in currencies) {
@@ -99,26 +100,38 @@ async function fetchConversionRates () {
             `${url}/latest?apikey=${apiKey}&base_currency=${first}`
         );
         const data = await response.json();
-        conversionRates = data.data;
+        // conversionRates = data.data;
+
+        for (const [currency, rate] of Object.entries(data.data)) {
+            conversionRates[currency] = rate;
+        }
+
     } catch (error) {
         console.error("Error fetching conversion rates: ", error);
     }
 }
 
+
+
 //Function to convert currency in one direction (first -> second)
 function convertFirstToSecond() {
-    const floatedFirstInputValue = parseFloat(firstInputValue);
-    const second = secondSelect.value;
+
+    
+    let floatedFirstInputValue = parseFloat(firstInput.value);
+    let second = secondSelect.value;
 
     if (!floatedFirstInputValue || floatedFirstInputValue <= 0 || !conversionRates[second]) {
-        secondInputValue = "";// cClearing the second input field if input is invalid
+        secondInputValue = "";// Clearing the second input field if input is invalid
         return;
     }
 
-    const rate = conversionRates[second].value;
+    const rate = conversionRates[second].value;    
     const convertedValue = (floatedFirstInputValue * rate).toFixed(2);
-    secondInputValue = convertedValue;
-    secondInputValue.style.color = "#4CAF50";
+    secondInput.value = convertedValue;
+    // secondInput.value = convertedValue;
+    console.log("c value: ", floatedFirstInputValue, rate, convertedValue)
+    // secondInputValue.style.color = "#4CAF50";
+
 }
 
 //Function to convert currency in the other direction (second -> first)
@@ -133,10 +146,15 @@ function convertSecondToFirst() {
     }
 
     const rate = 1 / conversionRates[first].value;
+    console.log();
+    
     const convertedValue = (floatedSecondInputValue * rate).toFixed(2);
-    firstInputValue = convertedValue;
-    firstInputValue.style.color = "#4CAF50";
+    firstInput.value = convertedValue;
+    // firstInputValue.style.color = "#4CAF50";
+    console.log("c value: ", floatedSecondInputValue, rate, convertedValue)
+
 }
+
 
 // Event listeners
 firstSelect.addEventListener("change", async () => {
