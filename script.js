@@ -162,8 +162,8 @@ firstSelect.addEventListener("change", async () => {
     convertFirstToSecond();// Calculating the result
 });
 secondSelect.addEventListener ("change", convertFirstToSecond); // Update result when "secondSelect" changes
-firstInput.addEventListener ("change", convertFirstToSecond); // Update "secondInput" in real-time when the "firstSelect" changes
-secondInput.addEventListener ("change", convertSecondToFirst); // Update "firstInput" in real-time when the "secondSelect" changes
+firstInput.addEventListener ("input", convertFirstToSecond); // Update "secondInput" in real-time when the "firstSelect" 
+secondInput.addEventListener ("input", convertSecondToFirst); // Update "firstInput" in real-time when the "secondSelect" 
 
 // Input validation
 firstInput.addEventListener("input", function () {
