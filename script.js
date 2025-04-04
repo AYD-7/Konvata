@@ -137,15 +137,15 @@ function convertFirstToSecond() {
 //Function to convert currency in the other direction (second -> first)
 
 function convertSecondToFirst() {
-    const floatedSecondInputValue = parseFloat(secondInputValue);
-    const first = firstSelect.value;
+    let floatedSecondInputValue = parseFloat(secondInput.value);
+    let first = firstSelect.value;
 
     if (!floatedSecondInputValue || floatedSecondInputValue <= 0 ||!conversionRates[first]) {
         firstInputValue = "";// Clearing the first input field if input is invalid
         return;
     }
 
-    const rate = 1 / conversionRates[first].value;
+    const rate = conversionRates[first]?.value ? (1 / conversionRates[first].value) : 0;
     console.log();
     
     const convertedValue = (floatedSecondInputValue * rate).toFixed(2);
